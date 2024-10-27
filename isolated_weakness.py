@@ -3,7 +3,7 @@ import pandas as pd
 
 # create heatmap of combined (normalized?) completion% and average yards gained by location on the field
     # go through each game for a given team, and calculate defensive weakness
-    # for each team, aggregate defensive plays from each of their games, and find average yards gained (either from pass or run) and completion percentage based on location on the field
+    # for each team, aggregate defensive plays from each of their games, and find average yards gained (either from pass or run) and pass completion percentage based on location on the field
     # split up location with x-by-x yard boxes (x can vary from 1 - 5 yards)
     # OUTPUT: make first heatmap, overlay on image of football field
 
@@ -37,6 +37,5 @@ tracking_df7 = pd.read_csv('data/tracking_week_7.csv')
 tracking_df8 = pd.read_csv('data/tracking_week_8.csv')
 tracking_df9 = pd.read_csv('data/tracking_week_9.csv')
 
-# For plays.csv for each play find the matching gameID in tracking data and extract the tracking data for that play, take the completion percentage and average yards
 metrics_df = pd.DataFrame(columns=['gameID', 'playID', 'completion%', 'average_yards'])
 
